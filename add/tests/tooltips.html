@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Tooltips</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="deque-patterns.css">
+	
+	<style>
+	/* * * * Codepen toggletip CSS * * * */
+	.toggletip-container {
+    position: relative;
+    display: inline-block;
+  }
+  .toggletip-bubble {
+    display: inline-block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 10em;
+    padding: 0.5rem;
+    background: #000;
+    color: #fff;
+  }
+  .toogletip button {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 0;
+    background: #000;
+    font-family: serif;
+    font-weight: bold;
+    color: #fff;
+  } 
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Tooltips</h1>
+
+<p>A tooltip provides extra information about a form field, a link, a button, or other focusable element. It must be triggered by both focus and hover events and remains on the screen as long as the trigger has the focus. The focus does not move to the tooltip.</p>
+
+<p>Tooltip has to work with:</p>
+<ul>
+	<li>Mouse (hover or click)</li>
+	<li>Mobile (focus or tap)</li>
+	<li>Keyboard (focus or enter/return)</li>
+	<li>Screen reader (focus or spacebar)</li>
+</ul>
+
+
+
+<p>Also see:</p
+<ul>
+<li><a href="https://inclusive-components.design/tooltips-toggletips/#tooltipasauxiliarydescription">Heydon Pickering's Tooltip as Auxiliary Description</a></li>
+	<li><a href="https://a11y.nicolas-hoffmann.net/simple-tooltip/">https://a11y.nicolas-hoffmann.net/simple-tooltip/</a></li>
+	<li><a href="https://www.sarasoueidan.com/blog/accessible-tooltips/">https://www.sarasoueidan.com/blog/accessible-tooltips/</a></p></li>
+</ul>
+
+
+
+<h2>Recommended technique: Accessibility Developer Guide Examples</h2>
+<p>See <a href="https://www.accessibility-developer-guide.com/examples/widgets/tooltips/">https://www.accessibility-developer-guide.com/examples/widgets/tooltips/</a></p>
+
+Two types of tooltips:
+<ol>
+	<li><strong>Automatically displayed tooltip:</strong> appear automatically on hovering and/or focusing on the element. These tooltips offer simple content that is just short, non-structured plain text.  Their contents are announced immediately by screen readers (so screen reader users usually do not even have to know about the text is a tooltip). <strong><a href="https://www.accessibility-developer-guide.com/examples/widgets/tooltips/_examples/automatically-displayed-tooltip/">Working example.</a></strong>
+	<ul>
+	<li>Mouse (hover) - yes </li>
+	<li>Mobile (focus) - yes, except "real" link activated before tooltip can be seen</li>
+	<li>Keyboard (focus) - yes</li>
+	<li>Screen reader (focus) - yes</li>
+</ul>	
+	</li>
+	<li><strong>Manually displayed tooltip:</strong> require manual activation to appear. These tooltips can offer rich content (e.g., links, lists, images) and are often long (requiring the user be given a choice of engaging with the content or not).  They need their own focusable toggle button: upon activation, the tooltip's content can be browsed manually by screen reader users (that is, users have a choice to engage with the longer content or not). <strong><a href="https://www.accessibility-developer-guide.com/examples/widgets/tooltips/_examples/manually-displayed-tooltip/">Working example.</a></strong>
+	<ul>
+	<li>Mouse (click) - yes - click does hide/show</li>
+	<li>Mobile (tap) - yes</li>
+	<li>Keyboard (enter/return) - yes</li>
+	<li>Screen reader (spacebar) - yes - on focusing on element, screen reader announces, "For more details, consult adjacent tooltip"; and on focus on tooltip icon, "Toggle tooltip collapsed. To Activate use spacebar." A little awkward but not bad.</li>
+</ul>
+	</li>
+</ol>
+
+<p>Question to consider: Are the manual, long- and/or rich-text tooltips really tooltips? Or should they more correctly be classified as modal dialogs?</p>
+<hr>
+
+<h1>Rejected: These tooltips that don't work well enough</h1>
+<!-- Codepen Toggletip -->
+<div class="toogletip">
+<h2>Toggletip from paragraph</h2>
+<p>This is kind of nice and simple, but the tooltip is triggered only onClick. We could probably adjust it to work on onHover and onFocus.</p>
+<p data-toggletip>
+  This clarifies whatever needs clarifying.
+</p>
+
+<p>See <a href="https://codepen.io/heydon/pen/Vzwdpy">https://codepen.io/heydon/pen/Vzwdpy</a></p>
+</div>
+<hr>
+
+
+
+<!-- Deque tooltips -->
+<div id="deque">
+	<h2>Deque Toggletip Examples</h2>
+	These function on hover and focus. However, like the one above, screen readers don't mention that there is a related tooltip with these elements. People using mice and keyboards can see the tooltip when they hover or tab to the element. People on screen readers should have some sort of announcement that there is a tooltip available. Perhaps an aria-label saying "Select spacebar to access tooltip" 
+	<div id="example">
+		<h4 class="neutral">Tooltips on form inputs:</h4>
+		<p> <label for="nameInput">First Name</label> <span class="deque-tooltip-wrapper">
+			<input id="nameInput" type="text" data-deque-tooltip="Your given name" class="deque-input" aria-describedby="g0a458e0b-2455-e08f-d479-e55fa3709b21">
+			<span role="tooltip" id="g0a458e0b-2455-e08f-d479-e55fa3709b21" class="deque-tooltip deque-hidden" aria-hidden="true" style="left: 133px; bottom: 120%;"><span aria-label="Tooltip :"></span>Your given name</span></span> </p>
+		<p> <label for="lastInput">Last Name</label> <span class="deque-tooltip-wrapper">
+			<input id="lastInput" type="text" data-deque-tooltip="Your surname or family name" class="deque-input" aria-describedby="g79c2732f-d93b-a6c0-e212-6766d4b527d8">
+			<span role="tooltip" id="g79c2732f-d93b-a6c0-e212-6766d4b527d8" class="deque-tooltip deque-hidden" aria-hidden="true" style="left: 133px; bottom: 120%;"><span aria-label="Tooltip :"></span>Your surname or family name</span></span> </p>
+		<h4 class="neutral">Tooltips on links:</h4>
+		<p> <span class="deque-tooltip-wrapper"><a id="demo-link1" href="javascript:void(0);" data-deque-tooltip="Tooltips can contain markup such as &lt;strong&gt;&amp;lt;strong&amp;gt;&lt;/strong&gt; and &lt;em&gt;&amp;lt;em&amp;gt;&lt;/em&gt; and even images:&lt;br&gt; &lt;img src='assets/images/module-aria/sun.png' alt='Emoji smiling sun' height='24' width='24'&gt;" aria-describedby="gd23cd85d-4ce9-6876-fca5-95368629c1f2"> Link 1 </a><span role="tooltip" id="gd23cd85d-4ce9-6876-fca5-95368629c1f2" class="deque-tooltip deque-hidden" aria-hidden="true" style="left: 25px; bottom: 120%;"><span aria-label="Tooltip :"></span>Tooltips can contain markup such as <strong>&lt;strong&gt;</strong> and <em>&lt;em&gt;</em> and even images:<br>
+			<img src="assets/images/module-aria/sun.png" alt="Emoji smiling sun" height="24" width="24"></span></span> </p>
+		<p> <span class="deque-tooltip-wrapper"><a id="demo-link2" href="javascript:void(0);" data-deque-tooltip="This is non-functional demo link with a tooltip" aria-describedby="g69bc3bae-a911-a1b6-0b4d-403df8d8fb71"> Link 2 </a><span role="tooltip" id="g69bc3bae-a911-a1b6-0b4d-403df8d8fb71" class="deque-tooltip deque-hidden" aria-hidden="true"><span aria-label="Tooltip :"></span>This is non-functional demo link with a tooltip</span></span> </p>
+		
+		<h4 class="neutral">Tooltips on buttons:</h4>
+		<p> <span class="deque-tooltip-wrapper"><button id="demo-button1" class="deque-button" data-deque-tooltip="This particular tooltip is longer than the others, and spans several rows. The height is calculated automatically by the script and the offset is applied appropriately. It is possible to create long tooltips, but it is NOT recommended. The aria-describedby attribute does not allow screen reader users to pause in the middle of a tooltip and start again where they left off. They have to focus again on the element and listen to the whole tooltip from the beginning." aria-describedby="gd345d3b9-5b91-c138-eeea-08c42d81ffba"> Button 1 </button><span role="tooltip" id="gd345d3b9-5b91-c138-eeea-08c42d81ffba" class="deque-tooltip deque-hidden" aria-hidden="true" style="left: 100px; bottom: 120%;"><span aria-label="Tooltip :"></span>This particular tooltip is longer than the others, and spans several rows. The height is calculated automatically by the script and the offset is applied appropriately. It is possible to create long tooltips, but it is NOT recommended. The aria-describedby attribute does not allow screen reader users to pause in the middle of a tooltip and start again where they left off. They have to focus again on the element and listen to the whole tooltip from the beginning.</span></span></p>
+		
+		<p><span class="deque-tooltip-wrapper"><button id="demo-button2" class="deque-button" data-deque-tooltip="This is non-functional demo link with a tooltip" aria-describedby="tooltip-test"> Button 2 </button><span role="tooltip" id="tooltip-test" class="deque-tooltip deque-hidden" aria-hidden="true" style="left: 100px; bottom: 120%;"><span aria-label="Tooltip :"></span>This is non-functional demo link with a tooltip</span></span> </p>
+		
+		<p> <span class="deque-tooltip-wrapper"><button id="demo-button3" class="deque-button" data-deque-tooltip="This is a non-functional demo button with a tooltip" aria-describedby="g5a57853c-792e-08ec-44cb-e3bd66ad24cd">Button 3</button><span role="tooltip" id="g5a57853c-792e-08ec-44cb-e3bd66ad24cd" class="deque-tooltip deque-hidden" aria-hidden="true" style="left: 100px; bottom: 120%;"><span aria-label="Tooltip :"></span>This is a non-functional demo button with a tooltip</span></span> </p>
+	</div>
+	<p>See <a href="https://dequeuniversity.com/library/aria/tooltip">https://dequeuniversity.com/library/aria/tooltip</a></p>
+
+<h3>Edited Version of Deque Toggletip Examples</h3>
+<p> <a id="demo-link1" href="javascript:void(0);" data-deque-tooltip="This is a tooltip on link 1" role="tooltip"> Link 1 </a> </p>
+<p> <a id="demo-link2" href="javascript:void(0);" data-deque-tooltip="This is another tooltip on link 2" aria-label="Select spacebar to activate tooltip" role="tooltip"> Link 2 </a> </p>
+<p> <button id="demo-button1" class="deque-button" data-deque-tooltip="This is a tooltip on button 1" aria-label="Select spacebar to activate tooltip"> Button 1 </button> </p>
+<p> <button id="demo-button2" class="deque-button" data-deque-tooltip="This is a tooltip on button 2" aria-label="Select spacebar to activate tooltip"> Button 2 </button> </p>
+</div>
+<hr>
+
+
+
+
+</main>
+</body>
+<script type="text/javascript" src="deque-patterns.js"></script>
+<script> // * * * Codepen toggletip JSS * * *
+(function() {
+  // Get all the toggletip buttons
+  var toggletipTexts = document.querySelectorAll('[data-toggletip]');
+
+  // Iterate over them
+  Array.prototype.forEach.call(toggletipTexts, function(toggletipText) {
+    // Create the container element
+    var container = document.createElement('span');
+    container.setAttribute('class', 'toggletip-container');
+    
+    // Put it before the original element in the DOM
+    toggletipText.parentNode.insertBefore(container, toggletipText);
+    
+    // Create the button element
+    var toggletip = document.createElement('button');
+    toggletip.setAttribute('type', 'button');
+    toggletip.setAttribute('aria-label', 'more info');
+    toggletip.setAttribute('data-toggletip-content', toggletipText.textContent);
+    toggletip.textContent = 'i';
+    
+    // Place the button element in the container
+    container.appendChild(toggletip);
+    
+    // Create the live region
+    var liveRegion = document.createElement('span');
+    liveRegion.setAttribute('role', 'status');
+    
+    // Place the live region in the container
+    container.appendChild(liveRegion);
+    
+    // Remove the original element
+    toggletipText.parentNode.removeChild(toggletipText);
+    
+    // Build `data-tooltip-content` 
+    var message = toggletip.getAttribute('data-toggletip-content');
+    toggletip.setAttribute('data-toggletip-content', message);
+    toggletip.removeAttribute('title');
+    
+    // Get the message from the data-content element
+    var message = toggletip.getAttribute('data-toggletip-content');
+
+    // Get the live region element
+    var liveRegion = toggletip.nextElementSibling;
+
+    // Toggle the message
+    toggletip.addEventListener('click', function() {
+        liveRegion.innerHTML = '';
+        window.setTimeout(function() {
+          liveRegion.innerHTML = '<span class="toggletip-bubble">'+ message +'</span>';
+        }, 100);
+    });
+
+    // Close on outside click
+    document.addEventListener('click', function (e) {
+      if (toggletip !== e.target) {
+        liveRegion.innerHTML = '';
+      }                        
+    });
+
+    // Remove toggletip on ESC
+    toggletip.addEventListener('keydown', function(e) {
+      if ((e.keyCode || e.which) === 27)
+      liveRegion.innerHTML = '';
+    });
+    
+    // Remove on blur
+    toggletip.addEventListener('blur', function (e) {
+      liveRegion.innerHTML = '';
+    });
+  });
+}());
+</script>
+
+</html>

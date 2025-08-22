@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Language and Symbols</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Language and Symbols</h1>
+
+<h2>How do screen readers read symbols?</h2>
+
+
+<p>Symbols with paragraph tags around each.</p>
+<p>!</p>
+<p>@</p>
+<p>#</p>
+<p>$</p>
+<p>%</p>
+<p>VO reads all symbols. JAWS reads the ! as "exclaim."</p>
+
+<hr>
+
+<p>Symbols with empty space around each: ! @ # $ %</p>
+<p>VO reads all symbols except the exclamation mark.</p>
+
+<p>Symbols with empty space around each and exclamation mark in second place: @ ! # $ %</p>
+<hr>
+
+<p>Symbols with a span tag around each: <span>!</span> <span>@</span> <span>#</span> <span>$</span> <span>%</span></p>
+<p>VO reads all symbols except the exclamation mark.</p>
+
+<p>With an aria label: <span aria-label="exclamation mark">!</span></p>
+<p>With an span title: <span title="exclamation mark">!</span>
+<p>With an abbr title: <abbr title="exclamation mark">!</abbr>
+<p>As an HTML entity: &excl;</p>
+<p>As a paragraph:</p>
+<p>!</p>
+
+<hr>
+
+<p>Symbols as list items:</p>
+<ul>
+<li>!</li>
+<li>@</li>
+<li>#</li>
+<li>$</li>
+<li>%</li>
+</ul>
+<p>VO reads all symbols except the exclamation mark.</p>
+
+<p>Symbols as list items and exclamation mark in second place:</p>
+<ul>
+<li>@</li>
+<li>!</li>
+<li>#</li>
+<li>$</li>
+<li>%</li>
+</ul>
+</main>
+</body>
+<script></script>
+</html>

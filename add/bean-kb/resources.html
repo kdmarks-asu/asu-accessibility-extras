@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Resources for Accessibility Testing Workshop</title>
+	<link href="bean.css" rel="stylesheet">
+</head>
+
+<body class="fixed">
+<div class="wrapper">
+
+<!-- Header -->
+	<header class="header"> <a class="sr-only" href="#main">Skip to Main Page Content</a> 
+	<div class="logo">
+		<a href="index.html">Mr. Bean Fan Page</a>
+	</div>
+	
+    <nav class="navbar" aria-label="Primary"> 
+      <ul id="menu-primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="errors.html">List of Errors</a></li>
+        <li><a href="#">Example dropdown menu</a>
+          <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          </ul></li>
+        <li><a href="fixed.html">Bean Page Fixed</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav> 
+	</header> 
+<!-- /Header -->
+
+<!-- Content -->
+	<main class="main-content" id="main"> 
+	<div class="main-wrapper">
+	<h1>Resources for Accessibility</h1>
+	<ul>
+		<li><a href="https://w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG) 2.1</a>: level AA is the compliance level ASU websites and apps must comply with.</li>
+		<li><a href="/audit">ASU web a11y audit tool</a>: step-by-step tool to learn accessibility testing (other than with assistive technologies; see info on those below).</li>
+	</ul>
+	
+	<p>Semi-automated accessibility audit tools are helpful and often used to prove or disprove compliance. However, for development purposes, keep in mind that they catch only 20-30% of issues:</p>
+	<ul>
+		<li><a href="https://siteimprove.com/en-us/core-platform/integrations/browser-extensions/">Siteimprove Accessibility Checker</a>: recommended browser extension for <a href="https://chrome.google.com/webstore/detail/siteimprove-browser-exten/amoojkmllfodlpgmdnclkgdnejgpeada">Chrome</a> and <a href="https://microsoftedge.microsoft.com/addons/detail/siteimprove-accessibility/knkipciinhbncgkkohfomamfldleiphf">Edge</a></li>
+		<li><a href="https://wave.webaim.org/extension/">WAVE</a>: Chrome and Firefox browser extension</li>
+		<li><a href="https://youtu.be/LK5RUWMxZkE">Test with Chrome DevTools, Lighthouse and axe</a>: if you're already a Dev Tools fan</li>
+		<li><a href="https://github.com/Khan/tota11y">Tota11y</a>: lightweight but good for non-devs</li>
+	</ul>
+	<p>Other useful tools include:</p>
+	<ul>
+		<li><a href="https://pauljadam.com/bookmarklets.html">Paul J. Adam’s accessibility bookmarklets</a></li>
+		<li><a href="https://validator.w3.org/nu/">W3C Nu HTML Validator</a>: HTML validation; add the <a href="https://developer.paciellogroup.com/blog/2019/02/wcag-2-0-parsing-error-bookmarklet/">WCAG Parsing bookmarklet</a> to filter out non-accessibility issues</li>
+		<li><a href="https://webaim.org/resources/contrastchecker/">WebAIM Color Contrast Checker</a></li>
+	</ul>
+
+<h2>Assistive Technologies</h2>
+
+<p>We recommend developers at least learn a little about the most popular technologies and maybe try them out once. At a minimum, use mobile speech recognition technologies like Siri and Google Assistant.</p>
+
+<p>The BBC's immensely helpful and comprehensive <strong><a href="https://bbc.github.io/accessibility-news-and-you/assistive-technology/testing.html">Testing with assistive technology</a></strong> is a very good overview.</p>
+
+<h3>Screen readers</h3>
+<h4>Desktop: VoiceOver (Mac)</h4>
+<ul>
+	<li><a href="https://egghead.io/lessons/screen-reader-navigate-a-webpage-with-voiceover-in-safari">Navigate a Webpage with VoiceOver in Safari</a></li>
+	<li><a href="https://webaim.org/articles/voiceover/">WebAIM's guide to VoiceOver</a></li>
+</ul>
+
+<h4>Desktop: JAWS (Windows)</h4>
+<ul>
+	<li><a href="https://www.youtube.com/watch?v=ZAVFzQl8wYU&amp;list=PLk-npwu4WEBTGqcLW6SQ6sdTkz3jTx3Gg">Surfing the Internet with JAWS</a> series, especially the videos on <a href="https://youtu.be/YUtblG1MSwU">web elements</a>, <a href="https://youtu.be/xydbnhUdczs">tables</a>, <a href="https://youtu.be/f9l6ZTDJBjA">keyboard shortcuts</a>, and <a href="https://youtu.be/idIfs386vao">forms</a></li>
+	<li><a href="https://youtu.be/LK5RUWMxZkE">JAWS Inspect</a>: screen reader testing without the screen reader; a bit expensive but worth it if you test a lot with JAWS</li>
+	<li><a href="https://webaim.org/articles/jaws/">WebAIM's guide to JAWS</a></li>
+</ul>
+
+<h4>Desktop: NVDA (Windows)</h4>
+<ul>
+	<li><a href="https://youtu.be/Jao3s_CwdRU">A11ycasts' guide to the free NVDA screen reader</a></li>
+	<li><a href="https://webaim.org/articles/nvda/">WebAIM's guide to NVDA</a></li>
+</ul>
+
+<h4>Mobile: Android TalkBack</h4>
+<ul>
+	<li><a href="https://youtu.be/7KlwcAY_hRg">Intro to Talkback: Android's Screen Reader</a></li>
+	<li><a href="https://webaim.org/articles/talkback/">WebAIM's guide to Android TalkBack</a></li>
+</ul>
+
+<h4>Mobile: iOS VoiceOver</h4>
+<ul>
+	<li><a href="https://youtu.be/qDm7GiKra28">Navigate your iPhone or iPad with VoiceOver</a></li>
+	<li><a href="https://webaim.org/articles/voiceover/mobile">WebAIM's guide to iOS VoiceOver</a></li>
+</ul>
+
+<h3>Speech Recognition</h3>
+<p>You can put money on it: Speech recognition is the next big thing. These days, it gets better by leaps and bounds. Be prepared is all we're saying. :) </p>
+
+<h4>Voice Control for Mac OS and iOS</h4>
+<ul>
+	<li><a href="https://youtu.be/7tkCYzPalSA">How To Use The iPhone’s New Voice Control Feature</a>: when mainstream Business Insider gets excited about an <em>accessibility feature</em>... yeah, voice is a thing.</li>
+	<li><a href="https://www.imore.com/everything-you-can-do-voice-control-iphone-and-ipad">Everything you can do with Voice Control on iPhone and iPad</a> (and <a href="https://youtu.be/80AyUCjZYZM">also good</a>)</li>
+	<li><a href="https://www.closingthegap.com/apple-use-voice-control-to-make-things-happen-on-your-mac-iphone-ipad-or-ipod-touch/">Closing The Gap on Voice Control</a>: Voice Control is on the Mac as well</li>
+</ul>
+
+<h4>Voice Access for Android</h4>
+<ul>
+	<li><a href="https://youtu.be/GIDaz4Nm5lE">Completely hands-free control with Voice Access for Android</a>: Android users are just as excited about adopting speech recognition</li>
+	<li>PCmag's <a href="https://www.pcmag.com/how-to/turn-on-voice-access-hands-free-android-experience">Need a Hands-Free Android Experience? Turn On Voice Access</a></li>
+	<li>Computerworld's <a href="https://youtu.be/LD9lZ14PWvw">Android Voice Access Demo</a></li>
+</ul>
+
+<h4>Dragon Naturally Speaking (Windows)</h4>
+<p>The leader for over 20 years, but with Apple and Android joining the field....watch out.</p>
+<ul>
+	<li><a href="https://youtu.be/kJKQmTumFP0?t=27">Dragon Naturally Speaking Demo</a></li>
+	<li><a href="https://www.barrierbreak.com/2019/01/02/cheat-sheet-dragon-naturally-speaking-commands-for-web-testing/">Dragon Naturally Speaking Commands for Web Testing</a></li>
+</ul>
+
+<p>Good luck!</p>
+
+	</div>
+	</main> 
+<!-- /Content -->
+
+<!-- Sidebar  -->
+	<aside class="sidebar"> <nav aria-label="Secondary"> 
+	<ul id="menu" class="sidenav">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="errors.html">List of Errors</a></li>
+		<li><a href="fixed.html">Bean Page Fixed</a></li>
+		<li><a href="resources.html">Resources</a></li>
+	</ul>
+	</nav> 
+	
+	<form method="post" action="#" onsubmit="return checkform(this);">
+		<p style="font-size: 1.2em; font-weight: bold;"><img alt="" src="images/thumbsup.png"> Yes! I want a Mr. Bean Screensaver!</p>
+		(Required fields in blue with asterisks.) 
+		<p><label>Name * 
+			<input type="text" name="name" required>
+			</label></p>
+		<p><label>Email * 
+			<input type="email" name="email" required>
+			</label></p>
+		<p><label>Phone 
+			<input type="tel" name="phone">
+			</label></p>
+		<fieldset>
+			<p><legend>Size:</legend><br>
+				<label>
+				<input type="radio" name="radio" value="1024x768">
+				1024 x 768</label><br>
+				<label>
+				<input type="radio" name="radio" value="1280x1024">
+				1280 x 1024</label><br>
+				<label>
+				<input type="radio" name="radio" value="1920x1080">
+				1920 x 1080</label></p>
+		</fieldset>
+		<p>
+			<input type="submit" name="submit" value="Submit">
+			<input type="reset" name="submit" value="Reset">
+		</p>
+	</form>
+	</aside> 
+<!-- /Sidebar -->
+
+<!-- Footer -->
+	<footer class="footer"> <nav aria-label="Footer"> 
+	<ul>
+		<li><a href="page.html?t=terms">Terms</a></li>
+		<li><a href="page.html?t=privacy">Privacy</a></li>
+		<li><a href="page.html?t=cookies">Cookies</a></li>
+	</ul>
+	</nav> 
+	<p>Inspired by the <a href="https://www.washington.edu/accesscomputing/AU/before.html">Accessible University Demo</a> from the <a href="https://www.washington.edu">University of Washington's</a> <a href="https://www.washington.edu/accesscomputing/">AccessComputing</a>.</p>
+	</footer> 
+<!-- /Footer -->
+
+</div>
+<script type="text/javascript" src="bean.js">
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Names, Labels, Titles</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Names, Labels, Titles</h1>
+
+<h2>Ways to label an element:</h2>
+
+<h3>As the element’s text: </h3>
+<p aria-hidden="true"><code>&lt;button&gt;Close&lt;/button&gt;</code></p>
+
+<p><button>Close</button></p>
+
+<p>Works with VoiceOver and Voice Control</p>
+
+
+<h3>As an aria-label: </h3>
+<p aria-hidden="true"><code>
+&lt;p&gt;&lt;button aria-label="Pause"&gt;&lt;img src="images/button.png" /&gt;&lt;/button&gt;&lt;/p&gt;
+</code></p>
+
+<p><button aria-label="Pause"><img src="images/button.png" /></button></p>
+
+<p>Works with VoiceOver and Voice Control</p>
+
+
+<h3>As alt text on the img/svg: </h3>
+<p aria-hidden="true"><code>
+&lt;button&gt;&lt;img src="images/button.png" alt="Start" /&gt;&lt;/button&gt;
+</code></p>
+
+<p><button><img src="images/button.png" alt="Start" /></button></p>
+
+<p>Works with VoiceOver and Voice Control</p>
+
+</main>
+</body>
+<script></script>
+</html>

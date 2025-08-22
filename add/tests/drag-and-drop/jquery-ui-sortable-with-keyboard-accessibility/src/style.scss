@@ -1,0 +1,16 @@
+ul.sortable {
+  padding: 0;
+  cursor: move;
+  user-select: none;
+  li {
+    list-style-type: none;
+    border: 1px solid gray;
+    background-color: lightgray;
+    margin: 3px;
+    padding: 3px;
+  }
+}
+
+.container {
+  width: 20%;
+}

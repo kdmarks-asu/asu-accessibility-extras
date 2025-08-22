@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>ARIA Testing Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+
+<h1>ARIA Testing Page</h1>
+
+<h2 _ngcontent-c8="" class="mat-h2" fxlayoutalign="start center" style="place-content: center flex-start; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;"> Original code <mat-icon _ngcontent-c8="" alt="Full text articles from journals, magazines, and newspapers available online through current ASU Library subscriptions." class="mat-icon material-icons" mattooltip="Full text articles from journals, magazines, and newspapers available online through current ASU Library subscriptions." mattooltipclass="info-tooltip" mattooltipposition="right" role="img" tabindex="0" aria-hidden="true" aria-describedby="labels" cdk-describedby-host="">aria-describedby="label"</mat-icon></h2>
+
+<h2 _ngcontent-c8="" class="mat-h2" fxlayoutalign="start center" style="place-content: center flex-start; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;"> Original code <mat-icon _ngcontent-c8="" alt="Full text articles from journals, magazines, and newspapers available online through current ASU Library subscriptions." class="mat-icon material-icons" mattooltip="Full text articles from journals, magazines, and newspapers available online through current ASU Library subscriptions." mattooltipclass="info-tooltip" mattooltipposition="right" role="img" tabindex="0" aria-describedby="labels" cdk-describedby-host="">remove aria-hidden</mat-icon></h2>
+
+<p> Alt text read?  Yes</p>
+<div role="img" aria-labelledby="labels">aria-labelledby</div>
+
+
+<p> Alt text read?  Yes</p>
+<div role="img" aria-describedby="labels">aria-describedby</div>
+
+
+<p> Alt text read?  No</p>
+<div role="img" alt="This is the description.">alt text</div>
+
+
+<p> Alt text read? Yes </p>
+<div role="img" aria-label="This is the description.">aria-label</div>
+
+
+<p> Alt text read?  Yes</p>
+<h2> Wrapped in a header 
+<div role="img" aria-label="This is the description.">aria-label</div>
+</h2>
+
+
+<p> Alt text read?  Yes</p>
+<h2> Wrapped in a header 
+<div role="img" aria-describedby="labels">aria-describedby</div>
+</h2>
+
+
+<p> Alt text read?  Yes</p>
+<h2>Label div below</h2>
+<div id="labels">This is the description.</div>
+
+</main>
+</body>
+<script></script>
+</html>

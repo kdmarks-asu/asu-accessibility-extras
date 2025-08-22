@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Try Out Code</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Try Out Code</h1>
+
+<h2>Tests</h2>
+
+<style>
+[role="tooltip"]{
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+button:hover + [role="tooltip"],  
+button:focus + [role="tooltip"] {  
+  position: static;
+  width: auto;
+  height: auto;
+}
+blockquote {
+	border-left: 0  none;
+}
+blockquote:before {
+display: block;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDIuODcgMjQ1LjgyIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6IzE5MTkxOTt9PC9zdHlsZT48L2RlZnM+PGcgaWQ9IkxheWVyXzIiIGRhdGEtbmFtZT0iTGF5ZXIgMiI+PGcgaWQ9IkxheWVyXzEtMiIgZGF0YS1uYW1lPSJMYXllciAxIj48cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Ik0xMTMuNjEsMjQ1LjgySDBWMTY0LjU2cTAtNDkuMzQsOC42OS03Ny44M1Q0MC44NCwzNS41OFE2NC4yOSwxMi45NSwxMDAuNjcsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NFQ1OC42MywxMzIuMjFoNTVabTE4MCwwSDE4MFYxNjQuNTZxMC00OS43NCw4LjctNzhUMjIxLDM1LjU4UTI0NC42NSwxMi45NSwyODAuNjMsMGwyMi4yNCw0Ni45cS0zNCwxMS4zMy00OC43MiwzMS41NHQtMTUuNTcsNTMuNzdoNTVaIi8+PC9nPjwvZz48L3N2Zz4K);
+	margin-top: 1.5rem;
+	background-repeat: no-repeat;
+	content: '';
+	min-height: 3rem;
+	min-width: 2.375rem;
+	float: left;
+	margin-left: -4rem;
+	color: #d0d0d0;
+}
+</style>
+
+<button aria-describedby="tooltip1">Tooltip trigger</button>  
+<div role="tooltip" id="tooltip1">This is our tooltip text.</div>  
+
+<blockquote>Some quotation or another. Just test txt for figuring out why the ::before and ::after selectors aren't working for me in Webspark site.</blockquote>
+
+<label for="email" class="visually-hidden">Email</label>
+<input id="email" type="text" name="email">
+
+
+</main>
+</body>
+<script></script>
+</html>

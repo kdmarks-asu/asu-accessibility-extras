@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Focus outline styles</title>
+<style>
+/* :focus {
+	 outline:none;
+	 border:1px solid #4D90FE;
+	 -webkit-box-shadow: 0px 0px 5px  #4D90FE;
+	 box-shadow: 0px 0px 5px  #4D90FE;
+} */
+/* :focus {
+  outline: solid 2px rgba(77, 144, 254, 0.4);
+} */
+</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Focus</h1>
+<p>This page is used for manual tests to gather intel about native focus styles in various browsers.</p>
+  
+<form>
+
+<label>Text field: <input id="mytextfield" type="text" name="sometextfield"></label>
+<br><br>
+
+<label>Textarea:<br>
+<textarea id="mytextarea" name="sometextarea"></textarea></label>
+<br><br>
+
+<fieldset>
+<legend>Checkboxes:</legend>
+<label><input type="checkbox" name="checkboxes" value="alpha"> Alpha</label><br>
+<label><input type="checkbox" name="checkboxes" value="bravo"> Bravo</label><br>
+<label><input type="checkbox" name="checkboxes" value="charlie"> Charlie</label><br>
+<label><input type="checkbox" name="checkboxes" value="delta"> Delta</label>
+</fieldset>
+<br><br>
+
+<fieldset>
+<legend>Radio buttons:</legend>
+<label><input type="radio" name="radiobuttons" value="alpha"> Alpha</label><br>
+<label><input type="radio" name="radiobuttons" value="bravo"> Bravo</label><br>
+<label><input type="radio" name="radiobuttons" value="charlie"> Charlie</label><br>
+<label><input type="radio" name="radiobuttons" value="delta"> Delta</label>
+</fieldset>
+<br><br>
+
+<label for="selectlist">Select List</label>
+<select id="selectlist" name="country">
+	<optgroup label="Africa">
+			<option value="gam">Gambia</option>
+			<option value="mad">Madagascar</option>
+	</optgroup>
+	<optgroup label="Europe">
+			<option value="fra">France</option>
+			<option value="rus">Russia</option>
+	</optgroup>
+	<optgroup label="North America">
+			<option value="can">Canada</option>
+			<option value="usa">USA</option>
+	</optgroup>
+</select>
+
+<p><input type="date"/></p>
+
+<p><input type="submit" name="submit" value="Submit Input"></p>
+
+<button>Button</button>
+</form>
+<br>
+
+<form>
+<label>Search Input: <input type="search" name="search"></label>
+</form>
+
+<p><a href="#">some link</a></p>
+
+<div tabindex="0">div with tabindex=0</div>
+
+
+</main>
+</body>
+</html>

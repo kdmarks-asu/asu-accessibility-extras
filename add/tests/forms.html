@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Forms</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Forms</h1>
+
+<form>
+
+<label>Text field: <input id="mytextfield" type="text" name="sometextfield"></label>
+<br><br>
+
+<label>Textarea:<br>
+<textarea id="mytextarea" name="sometextarea"></textarea></label>
+<br><br>
+
+<fieldset>
+<legend>Checkboxes:</legend>
+<label><input type="checkbox" name="checkboxes" value="alpha"> Alpha</label><br>
+<label><input type="checkbox" name="checkboxes" value="bravo"> Bravo</label><br>
+<label><input type="checkbox" name="checkboxes" value="charlie"> Charlie</label><br>
+<label><input type="checkbox" name="checkboxes" value="delta"> Delta</label>
+</fieldset>
+<br><br>
+
+<fieldset>
+<legend>Radio buttons:</legend>
+<label><input type="radio" name="radiobuttons" value="alpha"> Alpha</label><br>
+<label><input type="radio" name="radiobuttons" value="bravo"> Bravo</label><br>
+<label><input type="radio" name="radiobuttons" value="charlie"> Charlie</label><br>
+<label><input type="radio" name="radiobuttons" value="delta"> Delta</label>
+</fieldset>
+<br><br>
+
+<label for="selectlist">Select List:</label>
+<select id="selectlist" name="country">
+	<optgroup label="Africa">
+			<option value="gam">Gambia</option>
+			<option value="mad">Madagascar</option>
+	</optgroup>
+	<optgroup label="Europe">
+			<option value="fra">France</option>
+			<option value="rus">Russia</option>
+	</optgroup>
+	<optgroup label="North America">
+			<option value="can">Canada</option>
+			<option value="usa">USA</option>
+	</optgroup>
+</select>
+<br><br>
+
+<label for="ice-cream-choice">Datalist:</label>
+<input list="ice-cream-flavors" id="ice-cream-choice" name="ice-cream-choice" />
+<datalist id="ice-cream-flavors">
+    <option value="Chocolate">
+    <option value="Coconut">
+    <option value="Mint">
+    <option value="Strawberry">
+    <option value="Vanilla">
+</datalist>
+<br>
+
+<ul>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#Listbox">ARIA Listboxes</a></li>
+	<li><a href="https://www.w3.org/TR/wai-aria-practices-1.2/#combobox">ARIA Comboboxes</a></li>
+</ul>
+
+
+<p><label for="date-time">Date</label><br><input id="date-time" type="date"/></p>
+
+<p><input type="submit" name="submit" value="Submit Input"></p>
+
+</form>
+<br>
+
+
+</main>
+</body>
+<script></script>
+</html>

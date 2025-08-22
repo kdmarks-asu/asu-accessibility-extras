@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Aria Live and Alert Region Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	#myDIV, #second, #third, #fourth {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+  }
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Role=Alert</h1>
+
+<h2>1. Toggle the role=alert div to hide/show</h2>
+<p style="color: red">Works in JAWS and VoiceOver</p>
+
+<div id="myDIV" style="display:none;">
+  <div role="alert">
+    <p>We are displaying and hiding the alert role.</p>
+  </div>
+</div>
+
+<p> In this first example, we're displaying and hiding the div with the role=alert on it using display none/block .</p>
+
+<button onclick="myFunction()">Add the alert div</button>
+
+<p><hr></p>
+
+
+<h2>2. Toggle the content inside the role=alert div to hide/show</h2>
+<p style="color: red">Works in JAWS and VoiceOver</p>
+
+<div role="alert">
+  <div id="second" style="display:none;">
+    <p>We are displaying and hiding the content inside the alert role.</p>
+  </div>
+</div>
+
+<p> In this second example, the div with the role=alert on it is already in place. We're displaying and hiding the content inside the div using display none/block .</p>
+
+<button onclick="mySecond()">Add the content</button>
+
+<p><hr></p>
+
+
+<h2>3. Toggle the aria-live div to hide/show</h2>
+
+<p style="color: red">This is the only example where JAWS does NOT read the text. When the 
+<code>&lt;div aria-live="aggressive"&gt;</code> div is added after the page has already loaded, the Accessibility API is not aware of it.</p>
+
+<div id="third" style="display:none;">
+  <div aria-live="aggressive">
+    <p>We are displaying and hiding the alert role.</p>
+  </div>
+</div>
+
+<p> In this third example, we're displaying and hiding the div with the aria-live on it using display none/block .</p>
+
+<button onclick="myThird()">Add the aria-live div</button>
+
+<p><hr></p>
+
+
+<h2>4. Toggle the content inside the aria-live div to hide/show</h2>
+<p style="color: red">Works in JAWS and VoiceOver</p>
+
+<div aria-live="aggressive">
+  <div id="fourth" style="display:none;">
+    <p>We are displaying and hiding the content inside the aria-live div.</p>
+  </div>
+</div>
+
+<p> In this fourth example, the div with the aria-live on it is already in place. We're displaying and hiding the content inside the div using display none/block .</p>
+
+<button onclick="myFourth()">Add the content</button>
+
+
+</main>
+</body>
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function mySecond() {
+  var x = document.getElementById("second");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myThird() {
+  var x = document.getElementById("third");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function myFourth() {
+  var x = document.getElementById("fourth");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+</script>
+</html>

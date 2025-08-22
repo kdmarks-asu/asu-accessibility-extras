@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Tabs</title>
+	
+	<link rel="stylesheet" type="text/css" href="../style.css">
+	<style>
+.js-tablist__item {
+  display: inline-block;
+}
+.js-tablist__link {
+  display: inline-block;
+  padding: 1em 2em;
+  background: #f2f2f2;
+  cursor: pointer;
+}
+.js-tabcontent {
+    background: #f2f2f2;
+    padding: 1em;
+}
+[aria-hidden="true"].js-tabcontent {
+    display: none;
+}
+	</style>
+	
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="../menu.js"></script>
+
+<main id="main-content">
+
+<h1>Accessible tabs</h1>
+
+
+<div class="js-tabs">
+  <ul class="js-tablist" data-hx="h2">
+    <li class="js-tablist__item">
+      <a href="#id_first" class="js-tablist__link">iOS</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#id_second" class="js-tablist__link">Android</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#id_third" class="js-tablist__link">HTML</a>
+    </li>
+    <li class="js-tablist__item">
+      <a href="#id_fourth" class="js-tablist__link">Testing</a>
+    </li>
+  </ul>
+  <div id="id_first" class="js-tabcontent">
+  Progressively incentivize web-enabled e-commerce vis-a-vis virtual manufactured products. Proactively <a href="#">this is a link</a> capital for leading-edge e-services.
+  </div>
+  <div id="id_second" class="js-tabcontent">
+  Completely communicate real-time potentialities after strategic products. Efficiently morph tactical technologies through <a href="#">this is a link</a>.
+  </div>
+  <div id="id_third" class="js-tabcontent">
+  Efficiently morph tactical technologies through mission-critical alignments. Credibly leverage other's visionary <a href="#">this is a link</a>principle-centered data.
+  </div>
+   <div id="id_fourth" class="js-tabcontent">
+  Efficiently morph tactical technologies through mission-critical alignments. Credibly leverage other's visionary <a href="#">this is a link</a>principle-centered data.
+  </div> 
+</div>
+
+
+
+
+
+</main>
+</body>
+<script type="text/javascript" src="tabs.js"></script>
+</html>

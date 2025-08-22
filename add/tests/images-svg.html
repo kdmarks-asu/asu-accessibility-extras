@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Images: SVG</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	.list-head {
+		font-weight: bold;
+		font-size: 1.1rem;
+	}
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Images: Inline SVG</h1>
+
+
+<h2>Tests</h2>
+<ul>
+<li>JAWS ignores SVG/role=img with an empty alt tag. Removing those examples.</li>
+<li>JAWS ignores SVG/role=img without an alt tag. Removing those examples.</li>
+</ul>
+
+
+
+<ol>
+
+<!-- EXAMPLE -->
+<li><p class="list-head">Title (and desc)</p>
+<p>The <a href="https://www.w3.org/TR/2000/NOTE-SVG-access-20000807/#Equivalent1">W3C recommends</a> using a <code>&lt;title&gt;</code> for an SVG's alternative text but doesn't mention adding a role="img"</p>
+
+<p>JAWS reads title tag but not desc<br>
+VoiceOver reads the title and desc but says we're in an empty group. Doesn't recognize this as an image, so can't use G shortcut.</p>
+
+<svg xmlns=http://www.w3.org/2000/svg>
+   <title>This is the title tag</title>
+   <desc>This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title&gt;This is the title tag&lt;/title&gt;
+   &lt;desc&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+<!-- EXAMPLE -->
+<li><p class="list-head">Title (and desc) with aria-labelledby</p>
+
+<p>JAWS reads title and desc<br>
+VoiceOver reads the title and desc but says we're in a group</p>
+
+<svg aria-labelledby="title1 description1" xmlns=http://www.w3.org/2000/svg>
+   <title id="title1">This is the title tag</title>
+   <desc id="description1">This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg aria-labelledby=&quot;title1 description1&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title id=&quot;title1&quot;&gt;This is the title tag&lt;/title&gt;
+   &lt;desc id=&quot;description1&quot;&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+
+<!-- EXAMPLE -->
+<li><p class="list-head">Role=img (no Title) and alt text</p>
+
+<p>JAWS reads alt text<br>
+VoiceOver</p>
+
+<svg role="img" alt="This is an ALT tag text" xmlns=http://www.w3.org/2000/svg>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; alt=&quot;This is an ALT tag text&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+
+<!-- EXAMPLE -->
+<li><p class="list-head">Role=img (no Title) and aria-label</p>
+
+<p>JAWS reads aria label<br>
+VoiceOver</p>
+
+<svg role="img" aria-label="This is aria-label text" xmlns=http://www.w3.org/2000/svg>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; aria-label=&quot;This is aria-label text&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+<li><p class="list-head">Role=img (no Title) and aria-label with alt text</p>
+
+<p>JAWS reads aria-label but not alt text<br>
+VoiceOver</p>
+
+<svg role="img" aria-label="This is aria-label text" alt="This is an ALT tag tag" xmlns=http://www.w3.org/2000/svg>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; aria-label=&quot;This is aria-label text&quot; alt=&quot;This is an ALT tag tag&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+<!-- EXAMPLE -->
+<li><p class="list-head">With BOTH Title (and desc) AND role=img</p>
+<p>JAWS reads the title (not desc)<br>
+VoiceOver</p>
+
+<svg role="img" xmlns=http://www.w3.org/2000/svg>
+   <title>This is the title tag</title>
+   <desc>This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title&gt;This is the title tag&lt;/title&gt;
+   &lt;desc&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+<!-- EXAMPLE -->
+<li><p class="list-head">With BOTH Title (and desc) AND role=img also alt text</p>
+
+<p>JAWS reads the title but not the desc or the alt text<br>
+VoiceOver</p>
+
+<svg role="img" alt="This is an ALT tag tag" xmlns=http://www.w3.org/2000/svg>
+   <title>This is the title tag</title>
+   <desc>This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; alt=&quot;This is an ALT tag tag&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title&gt;This is the title tag&lt;/title&gt;
+   &lt;desc&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+
+<!-- EXAMPLE -->
+<li><p class="list-head">With BOTH Title (and desc) AND role=img also aria-label</p>
+
+<p>JAWS reads the aria-label but not the title or desc<br>
+VoiceOver</p>
+
+<svg role="img" aria-label="This is the aria label tag" xmlns=http://www.w3.org/2000/svg>
+   <title id="title">This is the title tag</title>
+   <desc id="description">This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; aria-label=&quot;This is the aria label tag&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title id=&quot;title&quot;&gt;This is the title tag&lt;/title&gt;
+   &lt;desc id=&quot;description&quot;&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+<!-- EXAMPLE -->
+<li><p class="list-head">With BOTH Title (and desc) AND role=img also aria-label and alt text</p>
+
+<p>JAWS reads the aria-label but not the title, desc or alt text<br>
+VoiceOver</p>
+
+<svg role="img" alt="This is an alt text tag" aria-label="This is the aria label tag" xmlns=http://www.w3.org/2000/svg>
+   <title id="title">This is the title tag</title>
+   <desc id="description">This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; alt=&quot;This is an alt text tag&quot; aria-label=&quot;This is the aria label tag&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title id=&quot;title&quot;&gt;This is the title tag&lt;/title&gt;
+   &lt;desc id=&quot;description&quot;&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+
+<!-- EXAMPLE -->
+<li><p class="list-head">Title (and desc) and role=img with aria-labelledby</p>
+
+<p>JAWS reads the title and desc<br>
+VoiceOver</p>
+
+<svg role="img" aria-labelledby="title2 description2" xmlns=http://www.w3.org/2000/svg>
+   <title id="title2">This is the title tag</title>
+   <desc id="description2">This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; aria-labelledby=&quot;title2 description2&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title id=&quot;title2&quot;&gt;This is the title tag&lt;/title&gt;
+   &lt;desc id=&quot;description2&quot;&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+<!-- EXAMPLE -->
+<li><p class="list-head">Title (and desc) and role=img with aria-labelledby and alt text</p>
+
+<p>JAWS reads the title and desc but not the alt text<br>
+VoiceOver</p>
+
+<svg role="img" alt="This is an ALT tag tag" aria-labelledby="title3 description3" xmlns=http://www.w3.org/2000/svg>
+   <title id="title3">This is the title tag</title>
+   <desc id="description3">This is the description tag</desc>
+   <circle cy="60" r="55" stroke="black" stroke-width="2" fill="red" />
+</svg>
+</br>
+
+<pre>
+&lt;svg role=&quot;img&quot; alt=&quot;This is an ALT tag tag&quot; aria-labelledby=&quot;title3 description3&quot; xmlns=http://www.w3.org/2000/svg&gt;
+   &lt;title id=&quot;title3&quot;&gt;This is the title tag&lt;/title&gt;
+   &lt;desc id=&quot;description3&quot;&gt;This is the description tag&lt;/desc&gt;
+   &lt;circle cy=&quot;60&quot; r=&quot;55&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot; fill=&quot;red&quot; /&gt;
+&lt;/svg&gt;
+</pre><br>
+</li>
+
+
+
+</main>
+</body>
+<script></script>
+</html>

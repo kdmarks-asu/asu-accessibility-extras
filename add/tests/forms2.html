@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Form input types and autocompletes</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+	.space li {padding: 0.5em 0;}
+	</style>
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<!-- <h1>Form Input Types and Autocompletes</h1>
+
+<h2>Form input types</h2>
+<p><a href="https://www.w3schools.com/html/html_form_input_types.asp">W3 Schools</a></p>
+<code>&lt;input type=&quot;VALUE&quot;&gt;</code>
+<form>
+<ol class="space">
+	<li>button <input type="button"></li>
+	<li>checkbox <input type="checkbox"></li>
+	<li>color <input type="color"></li>
+	<li>date <input type="date"></li>
+	<li>datetime local <input type="datetime-local"></li>
+	<li>email <input type="email"></li>
+	<li>file <input type="file"></li>
+	<li>hidden <input type="hidden"></li>
+	<li>image <input type="image"></li>
+	<li>month <input type="month"></li>
+	<li>number <input type="number"></li>
+	<li>password <input type="password"></li>
+	<li>radio <input type="radio"></li>
+	<li>range <input type="range"></li>
+	<li>reset <input type="reset"></li>
+	<li>search <input type="search"></li>
+	<li>submit <input type="submit" value="submit"></li>
+	<li>tel <input type="tel"></li>
+	<li>text <input type="text"></li>
+	<li>time <input type="time"></li>
+	<li>url <input type="url"></li>
+	<li>week <input type="week"></li>
+</ol>
+</form>
+
+<h2>Form Autocomplete Values</h2>
+<p><a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-autocomplete">HTML spec</a></p>
+<code>&lt;input type=&quot;text&quot; autocomplete=&quot;VALUE&quot;&gt;</code>
+<ol class="space">
+	<li>name <input type="text" autocomplete="name"></li>
+	<li>honorific-prefix <input type="text" autocomplete="honorific-prefix"></li>
+	<li>given-name <input type="text" autocomplete="given-name"></li>
+	<li>additional-name <input type="text" autocomplete="additional-name"></li>
+	<li>family-name <input type="text" autocomplete="family-name"></li>
+	<li>honorific-suffix <input type="text" autocomplete="honorific-suffix"></li>
+	<li>nickname <input type="text" autocomplete="nickname"></li>
+	<li>username <input type="text" autocomplete="username"></li>
+	<li>new-password <input type="text" autocomplete="new-password"></li>
+	<li>current-password <input type="text" autocomplete="current-password"></li>
+	<li>one-time-code <input type="text" autocomplete="one-time-code"></li>
+	<li>organization-title <input type="text" autocomplete="organization-title"></li>
+	<li>organization <input type="text" autocomplete="organization"></li>
+	<li>street-address <input type="text" autocomplete="street-address"></li>
+	<li>address-line1 <input type="text" autocomplete="address-line1"></li>
+	<li>address-line2 <input type="text" autocomplete="address-line2"></li>
+	<li>address-line3 <input type="text" autocomplete="address-line3"></li>
+	<li>address-line4 <input type="text" autocomplete="address-level4"></li>
+	<li>address-level3 <input type="text" autocomplete="address-level3"></li>
+	<li>address-level2 <input type="text" autocomplete="address-level2"></li>
+	<li>address-level1 <input type="text" autocomplete="address-level1"></li>
+	<li>country <input type="text" autocomplete="country"></li>
+	<li>country-name <input type="text" autocomplete="country-name"></li>
+	<li>postal-code <input type="text" autocomplete="postal-code"></li>
+	<li>cc-name <input type="text" autocomplete="cc-name"></li>
+	<li>cc-given-name <input type="text" autocomplete="cc-given-name"></li>
+	<li>cc-additional-name <input type="text" autocomplete="cc-additional-name"></li>
+	<li>cc-family-name <input type="text" autocomplete="cc-family-name"></li>
+	<li>cc-number <input type="text" autocomplete="cc-number"></li>
+	<li>cc-exp <input type="text" autocomplete="cc-exp"></li>
+	<li>cc-exp-month <input type="text" autocomplete="cc-exp-month"></li>
+	<li>cc-exp-year <input type="text" autocomplete="cc-exp-year"></li>
+	<li>cc-csc <input type="text" autocomplete="cc-csc"></li>
+	<li>cc-type <input type="text" autocomplete="cc-type"></li>
+	<li>transaction-currency <input type="text" autocomplete="transaction-currency"></li>
+	<li>transaction-amount <input type="text" autocomplete="transaction-amount"></li>
+	<li>language <input type="text" autocomplete="language"></li>
+	<li>bday <input type="text" autocomplete="bday"></li>
+	<li>bday-day <input type="text" autocomplete="bday-day"></li>
+	<li>bday-month <input type="text" autocomplete="bday-month"></li>
+	<li>bday-year <input type="text" autocomplete="bday-year"></li>
+	<li>sex <input type="text" autocomplete="sex"></li>
+	<li>url <input type="text" autocomplete="url"></li>
+ 	<li>photo <input type="text" autocomplete="photo"></li>
+	<li>tel <input type="text" autocomplete="tel"></li>
+	<li>tel-country-code <input type="text" autocomplete="tel-country-code"></li>
+	<li>tel-national <input type="text" autocomplete="tel-national"></li>
+	<li>tel-area-code <input type="text" autocomplete="tel-area-code"></li>
+	<li>tel-local <input type="text" autocomplete="tel-local"></li>
+	<li>tel-local-prefix <input type="text" autocomplete="tel-local-prefix"></li>
+	<li>tel-local-suffix <input type="text" autocomplete="tel-local-suffix"></li>
+	<li>tel-extension <input type="text" autocomplete="tel-extension"></li>
+	<li>email <input type="text" autocomplete="email"></li>
+	<li>impp <input type="text" autocomplete="impp"></li>
+</ol>
+</form>
+<p>Additional (secondary) autocomplete values are:</p>
+<code>&lt;textarea autocomplete=&quot;section-blue shipping street-address&quot;&gt;</code>
+<ul>
+	<li>"section-VALUE"</li>
+	<li>"shipping"</li>
+	<li>"billing"</li>
+	<li>"home"</li>
+	<li>"work"</li>
+	<li>"mobile"</li>
+	<li>"fax"</li>
+	<li>"pager"</li>
+</ul>
+ -->
+
+<h2>TEST</h2>
+<form>
+<p><label for="email">Email</label> <input id="email" type="email" autocomplete="email"></p>
+<p><label for="email2">Your email address</label> <input id="email2" type="text"></p>
+<p><input type="submit" value="Submit"></p>
+</form>
+
+
+</main>
+</body>
+<script></script>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A Very Sad, Inaccesible Webpage</title>
+	<link href="bean.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="wrapper">
+
+<!-- Header -->
+	<div class="header">
+		<div class="logo">
+			<a href="index.html">Home</a>
+		</div>
+		<div class="navbar">
+			<ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="errors.html">List of Errors</a></li>
+        <li><a href="#">Example dropdown menu</a>
+          <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          </ul></li>
+        <li><a href="fixed.html">Bean Page Fixed</a></li>
+        <li><a href="resources.html">Resources</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- /Header -->
+
+<!-- Content -->
+	<div class="main-content">
+		<div class="main-wrapper">
+			
+			<p><b>Test your knowledge of web accessibility with the very inaccessible Mr. Bean Fan Page!</b> There are at least 12 accessibility barriers on this page. See how many of them you can identify.</p>
+			<ol>
+        <li>Open the <a class="show-outline" href="/audit">ASU Web Accessibility Audit tool</a> in a separate tab.</li>
+        <li>Go through the 9 steps of the audit, answering the questions, then create a report.</li>
+        <li>To check for even more accessibility issues, run the Siteimprove extension.</li>
+        <li>How did you do? Check your answers against the <a class="show-outline" href="errors.html">list of all known issues</a> on this page.</li>
+			</ol>
+				
+			<p><img src="images/line.png" width="90%"></p>
+
+			<fieldset class="blue-content">
+				<div style="font-size: 1.5em; margin: 0.75em 0;">
+					Bonus Points
+				</div>
+				<p>Can you identify any other accessibility barriers? See "Bonus Points" for a list of advanced accessibility issues.</p>
+				<button style="text-align:center;" onclick="window.location.href='errors.html#bonus';"> Bonus Points </button> 
+			</fieldset>
+			
+			<div class="columns">
+			
+				<div class="col col1">
+					<img src="images/bean-3.webp" width="220" height="137"><br>
+					<div style="font-size: 1.2em; margin: 0.75em 0;">
+						You Call This a Heading?
+					</div>
+					<p>It's pretty funny to see Mr. Bean scream...unless this motion makes you nauseated or sets off a seizure. <a class="show-outline" href="page.html?t=help">Read more</a></p>
+				</div>
+				
+				<div class="col col2">
+					<img src="images/sn-turkey-0320476-112x249.jpg" alt="sn-turkey-0320476-112x249.jpg" width="220" height="137"><br>
+					<div style="font-size: 1.2em; margin: 0.75em 0;">
+						Something is Wrong
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="page.html?t=support">Read more</a></p>
+				</div>
+				
+				<div class="col col3">
+					<img src="images/beanduck.jpg" width="220" height="137"><br>
+					<div style="font-size: 1.2em; margin: 0.75em 0;">
+						You Must Be Joking
+					</div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <a href="page.html?t=more">Read more</a></p>
+				</div>
+			</div>
+			
+			<p><img src="images/line.png" title="Gold horizontal divider" width="90%"></p>
+			
+			<div style="font-size: 1.5em; margin: 0.75em 0;">
+				<img src="images/impt.png"> Nonsense
+			</div>
+			<p>Lorem ipsum dolor sit amet, <a href="page.html?t=somepage">consectetur adipiscing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+						
+			<p><img src="images/line.png" width="90%"></p>
+			
+			<h4>
+				More Nonsense
+			</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate ut pharetra sit amet aliquam. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Ornare massa eget <a href="page.html?t=interviews">egestas purus viverra accumsan</a> in nisl nisi. Leo vel fringilla est ullamcorper eget nulla facilisi. Gravida cum sociis natoque penatibus et magnis.</p>
+			
+			<iframe src="https://player.vimeo.com/video/564445775" width="480" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe> 
+						
+			<p><img src="images/line.png" width="90%"></p>
+			
+			<div id="blue-container">
+			</div>
+		</div>
+	</div>
+<!-- /Content -->
+
+<!-- Sidebar  -->
+	<div class="sidebar">
+		<ul id="menu" class="sidenav">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="errors.html">List of Errors</a></li>
+			<li><a href="fixed.html">Bean Page Fixed</a></li>
+			<li><a href="resources.html">Resources</a></li>
+		</ul>
+		
+		<form method="post" action="#" onsubmit="return checkform(this);">
+			<p style="font-size: 1.2em;"><b><img alt="Thumbs up icon" src="images/thumbsup.png"> Yes! I want a Mr. Bean Screensaver!</b></p>
+			<p>Name 
+				<input type="text" name="name" required>
+			</p>
+			<p>Email 
+				<input type="email" name="email" required>
+			</p>
+			<p>Phone 
+				<input type="tel" name="phone">
+			</p>
+			<p><b>Size:</b><br>
+				<input type="radio" name="radio" value="1024x768">
+				1024 x 768<br>
+				<input type="radio" name="radio" value="1280x1024">
+				1280 x 1024<br>
+				<input type="radio" name="radio" value="1920x1080">
+				1920 x 1080</p>
+			<p><b>Pick a color:</b><br>
+      <select>
+        <option value="tan">Tan</option>
+        <option value="beige">Beige</option>
+        <option value="khaki">Khaki</option>
+      </select>
+			<p>(Required fields in blue.)</p>
+			
+			<p>
+				<input type="submit" name="submit" value="Submit">
+				<input type="reset" name="submit" value="Reset">
+			</p>
+		</form>
+	</div>
+<!-- /Sidebar -->
+
+<!-- Footer -->
+	<div class="footer">
+		<ul>
+			<li><a href="page.html?t=terms">Terms</a></li>
+			<li><a href="page.html?t=privacy">Privacy</a></li>
+			<li><a href="page.html?t=cookies">Cookies</a></li>
+		</ul>
+		
+		<p><i>Inspired by the <a class="show-outline" href="https://www.washington.edu/accesscomputing/AU/before.html">Accessible University Demo</a> from the <a href="https://www.washington.edu">University of Washington's</a> <a class="show-outline" href="https://www.washington.edu/accesscomputing/">AccessComputing</a>.</i></p>
+	</div>
+<!-- /Footer -->
+
+</div>
+<script type="text/javascript" src="bean.js">
+</script>
+</body>
+</html>

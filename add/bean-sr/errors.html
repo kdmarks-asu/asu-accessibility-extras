@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Accessibility Errors on Very Sad, Inaccesible Webpage</title>
+	<link href="bean.css" rel="stylesheet">
+</head>
+
+<body class="fixed">
+<div class="wrapper">
+
+<!-- Header -->
+	<header class="header"> <a class="sr-only" href="#main">Skip to Main Page Content</a> 
+	<div class="logo">
+		<a href="index.html">Mr. Bean Fan Page</a>
+	</div>
+	<nav class="navbar" aria-label="Primary"> 
+	<ul id="menu-primary">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="errors.html">List of Errors</a></li>
+		<li><a href="fixed.html">Bean Page Fixed</a></li>
+		<li><a href="resources.html">Resources</a></li>
+	</ul>
+	</nav> </header> 
+<!-- /Header -->
+
+<!-- Content -->
+	<main class="main-content" id="main"> 
+	<div class="main-wrapper">
+		<h1>Accessibility Errors on a Very Sad, Inaccesible Webpage</h1>
+		<p>Test the Mr. Bean homepage using the <a href="/audit">ASU DIY Accessibility Audit</a> tool. Did you catch the following accessiblity barriers?</p>
+		<ol>
+			<li><strong>No headings.</strong> Although visually there appear to be headings on the Mr. Bean page, the text is merely styled to look like a heading; only one is marked up with actual HTML heading tags (H1, H2, H3, etc.). Headings organize content and make text more approachable. In addition, screen readers can generate browsable lists of headings, providing users who are blind with a mental picture of the structure of a page and helping them find content more quickly. Additionally, automated search and analysis engines use heading information to construct an index of a page's contents. (See more on <a href="/articles/navigation#headings">headings</a>.)</li>
+			<li><strong>No alternative text on images and misuse of <code>alt</code> tags.</strong> Alternative text is very important. Screen readers and other machines (such as search engines) can't read images and rely on text alternatives. Also, users with low vision who need to enlarge the screen depend on alternate text, which often scales better than images. On the Mr. Bean page, few of the images have <code>alt</code> tags. All inline images must have an <code>alt</code> attribute (sometimes referred to as an "<code>alt</code> tag"). (See more on <a href="/articles/images">alternative text for images</a>.)<br>
+			<br>
+			<ul>
+				<li><strong>Informative images</strong>: An image that conveys meaning or performs a function is considered informative (also often called "meaningful"). Its <code>alt</code> tag should contain a brief but equivalent text description of the image. On the Mr. Bean page, the informative images are the title image in the header and the three column images of Mr. Bean.</li>
+				<li><strong>Decorative images</strong>: A decorative image conveys no real meaning and has no real function. It should have an empty (NULL) <code>alt</code> tag. (A NULL <code>alt</code> tag alerts assistive technology to skip over the image.) Examples of decorative images are the gold horizontal bars, the thumbs up image in the form, and the blue badge icon next to the "Nonsense" heading. All of these need an <code>alt</code> tag. In addition, the second gold bar also incorrectly uses the <code>title</code> attribute (<code>title</code> attributes are used to provide supplemental text in a tooltip and should be avoided). Finally, as a decorative image, the thumbs up image should not have descriptive text but should have an empty <code>alt</code> tag.</li>
+			</ul>
+			</li>
+			<li><strong>Video doesn't have captions.</strong> Users with impaired hearing or who are deaf rely on captions to access videos. In addition, recent studies show that 71% of students without hearing difficulties use captions at least some of the time. All online ASU videos must have captions. (See more on <a href="/articles/video">captions for video</a>.)</li>
+			<li><strong>Some elements are not accessible by keyboard only.</strong> Many people with impaired mobility cannot use a mouse. In addition, most assistive technology (such as screen readers) uses keyboard-like functionality. It is imparative that users can move to all interactive items using the tab, arrow, spacebar and enter/return keys, alone. Interactive items are links, form fields, buttons, and widget controls (e.g., controls on videos, slideshows, etc.). On the Mr. Bean homepage, the dropdown submenu items in the main navigation bar are accessible by mouse but not by keyboard. To fix: make sure your CSS uses :focus as well as :hover. Also, never use onMouseover in Javascript; instead, use onFocus (onClick can be used with form controls and "real" links). (See more on <a href="/articles/keyboard">keyboard only access</a>.)</li>
+			<li><strong>No skip-to-content link.</strong> The skip-to-content link should be the first item screen readers read on the page. This provides users with a means to bypass sometimes frustratingly extensive header content repeated on every page. (See more on <a href="/articles/navigation#skip">skip-to-content links</a>.)</li>
+			<li><strong>Insufficient visual cues.</strong> When using only the keyboard to navigate the Mr. Bean homepage, it's very difficult to tell where you are on the page. A clearly visible outline should appear around the element you're currently focused on. This is called the <em>focus indicator</em>, and it's essential for keyboard-only users. Never use CSS to remove this outline. (See more on <a href="/articles/keyboard#focus-indicator">visible focus indicators</a>.)</li>
+			<li><strong>Display doesn't follow source code.</strong> As you tab through a webpage, you should move to each interactive item in the order it's displayed on the page. On the Mr. Bean page, tabbing out of the navigation menu jumps you to the bottom of the page (to the "Bonus Points" box). The box was moved from the top of the content to the bottom using CSS; instead, it should have been physically moved in the source code. </li>
+			<li><strong>Redundant and/or uninformative links.</strong> Screen readers can generate and read aloud a list of the links found on a page. This is a useful way to navigate, provided the links are descriptive. On the Mr. Bean page, the list of "Read more" links doesn't describe the links' various destinations. Using the destination page's title or subject matter as the link text would be much more informative. (See more on writing <a href="/articles/links#meaningful">informative links</a>.)</li>
+			<li><strong>Form fields don't have labels.</strong> On the "Yes! I want a Mr. Bean Screensaver!" form in the sidebar, the form fields appear to have labels, but actually this is just regular text styled to look like labels. Real HTML labels identify form fields to the browser, screen readers, and other machines, and they associate the label with its input. As a result real labels are treated differently and given unique characteristics. For instance on a form field with a real HTML label, you can click on the label itself to enter the form field, which is a big help to people with mobility issues, such as Parkinsons. Try it! 
+			<p><label>Name <input type="text" name="name" required></label></p>
+			<p>(See more on <a href="/articles/forms#labels">forms and labels</a>.)</p>
+			</li>
+			<li><strong>Instructions don't appear before the field(s) they reference.</strong> Instructions and help text should be read before the input to minimize user error, particularly for disabled users who typically make more errors. Move help text, instructions, and requirements higher in the source code, so they are read before the form controls they refer to. Ideally, place them inside the label because some assistive technologies ignore all text in a form that is not inside a form element. (See more on <a href="/articles/forms#help-text">forms and helptext</a>.)</li>
+			<li><strong>Color alone is used to communicate information.</strong> The links on the Mr. Bean page are very difficult to find. A secondary cue, such as an underline, is essential for users, particularly those with low vision or who are color blind. Users who are color blind would also have trouble with the form in the sidebar, which refers to required fields by color alone. A secondary text-based cue (such as an asterisk) is essential. (See more on <a href="/articles/color-contrast#sensory">not using color alone to indicate meaning</a>.)</li>
+			<li><strong>Insufficent color contrast.</strong> On the Mr. Bean page, links and text do not have sufficient contrast with their backgrounds. For people with color blindness or other vision problems, high contrast makes text much more legible. The visual color contrast ratio between text and its background should be 4.5:1. Use a tool such as the <a href="https://webaim.org/resources/contrastchecker/">WebAIM Color Contrast Checker</a> to check text-to-background contrast ratios. (See more on <a href="/articles/color-contrast#contrast">sufficient color contrast</a>.)</li>
+		</ol>
+		
+		<p><img class="gold-divider" src="images/line.png" alt=" "></p>
+		
+		<h2 id="bonus">Bonus Points</h2>
+		<p>Did you also recognize these additional barriers? If so, you're an amazing accessible coder!</p>
+		<ol>
+			<li><strong>No language defined.</strong> The default human language of each page should be identified to aid in translations to other languages, including braille and speech. To fix: Add the language to the <code>html</code> element: <code>&lt;html lang="en"&gt;</code></li>
+			<li><strong>Missing ARIA landmark roles.</strong> Did you click on the "Landmarks" check in Tota11y? Landmarks are an important tool for navigating a page with assistive devices like screen readers. Use Tota11y to take a look at the <a href="/add/bean/fixed.html">fixed Mr. Bean page</a>, which has had landmarks added it to it.</li>
+			<li><strong>Must be able to pause animation.</strong> The animation gif of Mr. Bean is more than merely annoying. For users with vestibular or seizure disorders, movement that begins automatically and continues for more that 5 seconds can cause serious illness, including nausea, dizziness, and seizures. Do not automatically start motion on the page. If automatic motion is imperative, you must give users a way to stop or pause the motion. See the <a href="/add/bean/fixed.html">fixed Mr. Bean page</a> for our solution, which was to use the Giffer library, so users can choose whether to play animated gifs or not. (See more on <a href="/articles/animation">animation</a>.)</li>
+			<li><strong>No fieldset and legend used to describe related form controls.</strong> In the form in the sidebar, the size options are coded as related radio buttons. A fieldset should wrap related form controls together with a legend that describes the group. To aid users, screen readers repeat the legend for every input in the fieldset. In this instance, "Size" becomes the legend of the fieldset, and the size options are labels for the radio buttons. (See more on <a href="/articles/forms#fieldsets">forms and fieldsets</a>.)</li>
+			<li><strong>Text in images should be made available in alternative text.</strong> The image in the header contains the graphic text "Mr. Bean's Fan Page," and it also serves as a link to the homepage, which makes the image both meaningful and functional. When an image contains text, that text should be repeated in the alternative text. In this case, the image is a background image--that is, it is replacing a text element using a CSS image replacement technique. Therefore, the text it is replacing should exactly mirror the text in the image. (See more on <a href="/articles/images#graphic-text">alternative text for images with graphic text</a>.)</li>
+			<li><strong>Using HTML markup incorrectly to achieve a presentational effect.</strong> In the "Bonus Points" section, the box around the text is created with a <code>fieldset</code>. Remember from #4 above that a fieldset wraps related form controls together and gives those elements certain abilities and characteristics. <strong>HTML markup has meaning</strong> (in otherwords, it is <em>semantic</em>). Don't use markup for how it looks; instead, use it only to identify and add meaning to elements.</li>
+		</ol>
+		
+		<p><img src="images/line.png" title="Gold horizontal divider" width="90%"></p>
+		
+		<h2><img src="images/impt.png" alt=" ">See the Fixes in Action</h2>
+		<p>Want to see an example of the fixes we discussed above? Take a look at the <a href="fixed.html">Bean Page Fixed page</a>. Run the ASU DIY Audit or Siteimprove tool on the page. You can also view the source code to see our fixes.</p>
+	</div>
+	</main> 
+<!-- /Content -->
+
+<!-- Sidebar  -->
+	<aside class="sidebar">
+	
+	<nav aria-label="Secondary"> 
+    <ul id="menu" class="sidenav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="errors.html">List of Errors</a></li>
+      <li><a href="fixed.html">Bean Page Fixed</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+	</nav> 
+	
+	<form method="post" action="#" onsubmit="return checkform(this);">
+		<p style="font-size: 1.2em; font-weight: bold;"><img alt="" src="images/thumbsup.png"> Yes! I want a Mr. Bean Screensaver!</p>
+		(Required fields in blue with asterisks.) 
+		<p><label>Name * 
+			<input type="text" name="name" required>
+			</label></p>
+		<p><label>Email * 
+			<input type="email" name="email" required>
+			</label></p>
+		<p><label>Phone 
+			<input type="tel" name="phone">
+			</label></p>
+			
+		<fieldset>
+		  <legend>Size:</legend><br>
+      <label><input type="radio" name="radio" value="1024x768">1024 x 768</label><br>
+      <label><input type="radio" name="radio" value="1280x1024">1280 x 1024</label><br>
+      <label><input type="radio" name="radio" value="1920x1080">1920 x 1080</label></p>
+		</fieldset>
+
+		<p><input type="submit" name="submit" value="Submit"> <input type="reset" name="submit" value="Reset"></p>
+	</form>
+	
+	</aside> 
+<!-- /Sidebar -->
+
+<!-- Footer -->
+	<footer class="footer"> 
+	<a class="sr-only test" href="page.html?t=none">Surprise! The secret number is 1.618</a> 
+	
+	<nav aria-label="Footer"> 
+	<ul>
+		<li><a href="page.html?t=terms">Terms</a></li>
+		<li><a href="page.html?t=privacy">Privacy</a></li>
+		<li><a href="page.html?t=cookies">Cookies</a></li>
+	</ul>
+	</nav> 
+	
+	<p>Inspired by the <a href="https://www.washington.edu/accesscomputing/AU/before.html">Accessible University Demo</a> from the <a href="https://www.washington.edu">University of Washington's</a> <a href="https://www.washington.edu/accesscomputing/">AccessComputing</a>.</p>
+	</footer> 
+<!-- /Footer -->
+
+</div>
+<script type="text/javascript" src="bean.js"></script>
+<script type="text/javascript" src="gifffer.min.js"></script>
+</body>
+</html>

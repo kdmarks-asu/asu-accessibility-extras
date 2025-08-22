@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>ARIA-describedby</title>
+	<style>
+	form {
+		position:absolute;
+	}
+	</style>
+</head>
+<body>
+<form>
+  <fieldset>
+    <legend>Login form</legend>
+    <div>
+      <label for="username">Your username</label>
+	  <input type="text" id="username" aria-describedby="username-tip" required />
+	</div>
+	<div>
+	  <label for="password">Your password</label>
+	  <input type="text" id="password" aria-describedby="password-tip" required />
+	</div>
+  </fieldset>
+  <div classs="tooltips">
+		<div role="tooltip" id="username-tip">Your username is your email address</div> 
+		<div role="tooltip" id="password-tip">Your password was emailed to you when you signed up</div>
+  </div>
+</form>
+
+
+
+</body>
+</html>

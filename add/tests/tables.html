@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Tables</title>
+	<style>
+	/* Menu */
+	.left ul {
+    padding-left:0;
+  }
+  .left li {
+    display: inline-block;
+    padding: 0 0.5em;
+    font-size: 0.85em;
+  }
+  /* Table */
+	.uds-table {
+	  background-color: green;
+	}
+	table {
+	  border-collapse: collapse;
+    border: 1px solid gray;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 1.25em;
+    /* width: 100%; */
+    overflow-x: scroll;
+	}
+	thead tr,
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  th, td {
+    text-align: left;
+    padding: 1em;
+	}
+  
+	</style>
+</head>
+
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Tables</h1>
+
+<div class="uds-table">
+<table tabindex="0">
+      <thead>
+        <tr>
+          <th scope="col">Enrollment</th>
+          <th scope="col">Fall 2015</th>
+          <th scope="col">Fall 2016</th>
+          <th scope="col">Fall 2017</th>
+          <th scope="col">Fall 2018</th>
+          <th scope="col">Fall 2019</th>
+          <th scope="col">Fall 2020</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Metropolitan campus population</th>
+          <td>71,946</td>
+          <td>71,946</td>
+          <td>71,946</td>
+          <td>71,946</td>
+          <td>71,946</td>
+          <td>71,946</td>
+        </tr>
+        <tr>
+          <th scope="row" class="indent">Tempe</th>
+          <td>51,869</td>
+          <td>51,869</td>
+          <td>51,869</td>
+          <td>51,869</td>
+          <td>51,869</td>
+          <td>51,869</td>
+        </tr>
+        <tr>
+          <th scope="row" class="indent">Downtown</th>
+          <td>11,737</td>
+          <td>11,737</td>
+          <td>11,737</td>
+          <td>11,737</td>
+          <td>11,737</td>
+          <td>11,737</td>
+        </tr>
+      </tbody>
+      <tbody>
+    </tbody>
+  </table>
+</div>
+
+<h2>Making the second cell in the row the TH, rather than the first</h2>
+<p> Example from <a href="https://www.w3.org/TR/WCAG20-TECHS/H63">W3C</a></p>
+
+ <table border="1">
+  <caption>Contact Information</caption>
+  <tr>
+    <td></td>
+    <th scope="col">Name</th>
+    <th scope="col">Phone#</th>
+    <th scope="col">Fax#</th>
+    <th scope="col">City</th>
+  </tr><tr>
+    <td>1.</td>
+    <th scope="row">Joel Garner</th>
+    <td>412-212-5421</td>
+    <td>412-212-5400</td>
+    <td>Pittsburgh</td>
+  </tr><tr>
+    <td>2.</td>
+    <th scope="row">Clive Lloyd</th>
+    <td>410-306-1420</td>
+    <td>410-306-5400</td>
+    <td>Baltimore</td>
+  </tr><tr>
+    <td>3.</td>
+    <th scope="row">Gordon Greenidge</th>
+    <td>281-564-6720</td>
+    <td>281-511-6600</td>
+    <td>Houston</td>
+  </tr>
+</table> 
+
+
+</main>
+</body>
+<script></script>
+</html>

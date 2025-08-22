@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Mr. Bean Fan Page</title>
+	<link href="bean.css" rel="stylesheet">
+</head>
+
+<body class="fixed">
+  <div class="wrapper">
+
+  <!-- Header -->
+  <header class="header"> <a class="sr-only" href="#main">Skip to Main Page Content</a> 
+    <div class="logo">
+      <a href="index.html">Mr. Bean Fan Page</a>
+    </div>
+    <nav class="navbar" aria-label="Primary"> 
+      <ul id="menu-primary">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="errors.html">List of Errors</a></li>
+        <li><a href="#">Example dropdown menu</a>
+          <ul>
+          <li><a href="#">Item 1</a></li>
+          <li><a href="#">Item 2</a></li>
+          <li><a href="#">Item 3</a></li>
+          </ul></li>
+        <li><a href="fixed.html">Bean Page Fixed</a></li>
+        <li><a href="resources.html">Resources</a></li>
+      </ul>
+    </nav>
+  </header> 
+  <!-- /Header -->
+
+  <!-- Content -->
+	<main class="main-content" id="main"> 
+    <div class="main-wrapper">
+      <h1>Mr. Bean Fan Page</h1>
+      <p>Test your knowledge of web accessibility with the very inaccessible Mr. Bean Fan Page! There are at least 12 accessibility barriers on this page. See how many of them you can identify.</p>
+    
+      <ol>
+        <li>Open the <a href="/audit">ASU Web Accessibility Audit tool</a> in a separate tab.</li>
+        <li>Go through the 9 steps of the audit, answering the questions, then create a report.</li>
+        <li>To check for even more accessibility issues, run the Siteimprove extension.</li>
+        <li>How did you do? Check your answers against the <a href="errors.html">list of all known issues</a> on this page.</li>
+      </ol>
+    
+      <p><img src="images/line.png" alt=" " width="90%"></p>
+    
+      <div class="columns">
+    
+        <div class="col col1">
+          <img class="animation" data-gifffer="images/bean-3.webp" data-gifffer-alt="Use your enter/return key to see Mr. Bean scream" width="220" height="137" giffer-width="220" giffer-height="137"><br>
+          <h2>You Call This a Heading?</h2>
+          <p>Find a way to pause animated gifs (<a href="https://www.w3.org/TR/WCAG21/#pause-stop-hide">see WCAG</a>), or better yet, allow users to choose whether to play them. Get the awesome <a href="https://github.com/krasimir/gifffer">Giffer library</a> we're using to control this animation.</p>
+        </div>
+      
+        <div class="col col2">
+          <img src="images/sn-turkey-0320476-112x249.jpg" alt="Mr. Bean with his head stuck inside an uncooked turkey" width="220" height="137"><br>
+          <h2>Something is Wrong</h2>
+          <p>Screen reader users can use a list of all links on a page to quickly get to the one they're looking for..but only if links are clear and unique. For example, <a href="page.html?t=support">This link is more unique</a> than a generic "read more."</p>
+        </div>
+      
+        <div class="col col3">
+          <img src="images/beanduck.jpg" alt="Mr. Bean scowling at a yellow rubber ducky" width="220" height="137"><br>
+          <h2>You Must Be Joking</h2>
+          <p>People using voice on their mobile devices also require every link be unique, so they don't confuse Siri, Google Assistant, etc. <a href="page.html?t=more">Bye, bye, redundant read more link.</a></p>
+        </div>
+		  </div>
+		
+      <p><img src="images/line.png" alt=" " width="90%"></p>
+    
+      <h2>No-Nonsense Typography</h2>
+      <p>Typography is an area that might not affect your WCAG conformance score, but can make your users' reading experience much more comfortable. To make this page more legible, we re-set the font-size to 1em, which respects the default text size users set in their browser. We increased the line-height (line spacing) to 1.6875em, although anything from 140-170% is usually acceptable. Lastly, we limited the maximum width of lines to 75 characters with a <code>max-width: 75ch</code>. Line widths of between 70-80 characters are the most comfortable for readers.</p>
+    
+      <p><img src="images/line.png" alt=" " width="90%"></p>
+    
+      <h2>More Nonsense</h2>
+        <p>We changed this area's heading from an &lt;h4&gt; to an &lt;h2&gt;. Why? This heading is equivalent to the two before it, so it must be the same level as them. Because those headings directly follow an &lt;h1&gt;, they must be &lt;h2&gt;s. Headings should be hierarchical (think of them as an outline), and levels shouldn't be skipped. If you don't like the look of the proper heading, change it in the CSS.</p>
+    
+      <iframe src="https://player.vimeo.com/video/564446018?texttrack=en" width="480" height="370" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title=”Mr. Bean video with captions”></iframe> 
+    
+      <p><img src="images/line.png" alt=" " width="90%"></p>
+    
+      <div class="blue-content" id="bonus">
+        <h2>Bonus Points</h2>
+        <p>Can you identify any other accessibility barriers? See "Bonus Points" for a list of advanced accessibility issues.</p>
+        <button style="text-align:center;" onclick="window.location.href='fixed.html#bonus';"> Bonus Points </button> 
+      </div>
+    
+	  </div>
+	</main> 
+<!-- /Content -->
+
+<!-- Sidebar  -->
+	<aside class="sidebar">
+	
+	<nav aria-label="Secondary"> 
+    <ul id="menu" class="sidenav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="errors.html">List of Errors</a></li>
+      <li><a href="fixed.html">Bean Page Fixed</a></li>
+      <li><a href="resources.html">Resources</a></li>
+    </ul>
+	</nav> 
+	
+	<form method="post" action="#" onsubmit="return checkform(this);">
+		<p style="font-size: 1.2em; font-weight: bold;"><img alt="" src="images/thumbsup.png"> Yes! I want a Mr. Bean Screensaver!</p>
+		(Required fields in blue with asterisks.) 
+		<p><label>Name * 
+			<input type="text" name="name" required>
+			</label></p>
+		<p><label for="email">Email * </label>
+			<input type="email" name="email" id="email" required>
+			</p>
+		<p><label>Phone 
+			<input type="tel" name="phone">
+			</label></p>
+			
+		<fieldset>
+		  <legend>Size:</legend><br>
+      <label><input type="radio" name="radio" value="1024x768">1024 x 768</label><br>
+      <label><input type="radio" name="radio" value="1280x1024">1280 x 1024</label><br>
+      <label><input type="radio" name="radio" value="1920x1080">1920 x 1080</label></p>
+		</fieldset>
+		
+		<label for="color">Pick a color:</label>
+      <select name="color" id="color">
+        <option value="tan">Tan</option>
+        <option value="beige">Beige</option>
+        <option value="khaki">Khaki</option>
+      </select>
+
+		<p><input type="submit" name="submit" value="Submit"> <input type="reset" name="submit" value="Reset"></p>
+	</form>
+	
+	</aside> 
+<!-- /Sidebar -->
+
+<!-- Footer -->
+	<footer class="footer"> 
+	<a class="sr-only test" href="page.html?t=none">Surprise! The secret number is 1.618</a> 
+	
+	<nav aria-label="Footer"> 
+	<ul>
+		<li><a href="page.html?t=terms">Terms</a></li>
+		<li><a href="page.html?t=privacy">Privacy</a></li>
+		<li><a href="page.html?t=cookies">Cookies</a></li>
+	</ul>
+	</nav> 
+	
+	<p>Inspired by the <a href="https://www.washington.edu/accesscomputing/AU/before.html">Accessible University Demo</a> from the <a href="https://www.washington.edu">University of Washington's</a> <a href="https://www.washington.edu/accesscomputing/">AccessComputing</a>.</p>
+	</footer> 
+<!-- /Footer -->
+
+</div>
+<script type="text/javascript" src="bean.js"></script>
+<script type="text/javascript" src="gifffer.min.js"></script>
+</body>
+</html>

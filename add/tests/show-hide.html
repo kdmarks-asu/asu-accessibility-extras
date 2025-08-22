@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Show and Hide</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+<style>
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(100%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.visually-hidden a:focus,
+.visually-hidden input:focus,
+.visually-hidden button:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+</style>
+
+</head>
+<body>
+<a class="sr-only" href="#main-content">Skip to main content</a>
+<script type="text/javascript" src="menu.js"></script>
+
+<main id="main-content">
+
+<h1>Show and Hide</h1>
+<h2>Method #1</h2>
+<p><code>.visually-hidden {<br>
+	&nbsp; position: absolute !important;<br>
+	&nbsp; height: 1px;<br>
+	&nbsp; width: 1px;<br>
+	&nbsp; overflow: hidden;<br>
+	&nbsp; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */<br>
+	&nbsp; clip: rect(1px, 1px, 1px, 1px);<br>
+	}</code></p>
+
+<p><code>.visually-hidden a:focus,<br>
+	.visually-hidden input:focus,<br>
+	.visually-hidden button:focus {<br>
+	&nbsp; position: static;<br>
+	&nbsp; width: auto;<br>
+	&nbsp; height: auto;<br>
+	}</code></p>
+
+<h3>Button:</h3>
+<div class="visually-hidden"><button>Show Me!</button></div>
+
+<h3>Paragraph:</h3>
+<div class="visually-hidden"><p>Show me sentence!</p></div>
+
+<h2>Method #2</h2>
+<p><code>
+.sr-only:not(:focus):not(:active) {<br />
+&#160;&#160;clip: rect(0 0 0 0); <br />
+&#160;&#160;clip-path: inset(100%);<br />
+&#160;&#160;height: 1px;<br />
+&#160;&#160;overflow: hidden;<br />
+&#160;&#160;position: absolute;<br />
+&#160;&#160;white-space: nowrap; <br />
+&#160;&#160;width: 1px;<br />
+}
+</code></p>
+
+
+<h3>Button:</h3>
+<button class="sr-only">Show Me!</button>
+
+<h3>Paragraph:</h3>
+<p class="sr-only">Show me sentence!</p>
+
+</main>
+</body>
+<script></script>
+</html>
