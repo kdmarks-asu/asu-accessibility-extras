@@ -1,0 +1,360 @@
+/**
+ * Styles for Introduction to Accessibility Coursew
+ */
+ 
+html {
+	font-family: "roboto", sans-serif
+}
+body {
+	background: #fff;
+	font-size: 1rem;
+	font-weight: normal;
+	color: #2D3B45;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
+}
+.clear {
+	clear: both;
+}
+
+/* =TYPOGRAPHY
+-------------------------------------------------------------- */
+
+a {
+	color: #8c1d40;
+}
+a:hover,
+a:focus {
+	color: #000;
+}
+h1, h2, h3, h4, h5 {
+	font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+	line-height: 1.5;
+	font-weight: normal;
+	margin: 6px 0;
+}
+h1 {
+	font-size: 2.5em;
+	font-weight: 200;
+	margin: 15px 0;
+	color: #666;
+}
+h2 {
+	font-size: 1.8em;
+}
+h3 {
+	font-size: 1.5em;
+}
+h3.center {
+	 text-align: center;
+	 color: #808080;
+		font-size: 1.2em;
+	 font-weight: bold;
+}
+.resources h3 {
+	font-size: 1.4em;
+}
+p {
+	margin: 12px 0;
+}
+blockquote {
+	background-color: #eee;
+	margin: 0 0 0 1em;
+	padding: 0 1em;
+	display: block;
+	width: 20em;
+	float: right;
+}
+blockquote.small {
+	width: 13em;
+}
+.emphasis,
+pre {
+	background-color: #eee;
+	padding: 1em;
+	margin: 0;
+	display: block;
+}
+.cite {
+	font-style: italic;
+}
+.caption {
+	font-size: 0.75em;
+}
+
+/* =LAYOUT
+-------------------------------------------------------------- */
+.page {
+	border-bottom: 40px solid #343a40;
+}
+.main {
+	padding-bottom: 3em;
+}
+.container {
+	max-width: 40em;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+.wide-page .container {
+	max-width: 50em;
+}
+.header {
+	background-color: #343a40;
+	color: #fff;
+}
+.breadcrumb {
+	padding: 1rem 0.72em;
+}
+.breadcrumb a,
+.breadcrumb span {
+	display: inline-block;
+	color: #fff;
+	padding: 0 0.25em;
+}
+.breadcrumb a:hover,
+.breadcrumb a:focus {
+	color: #ccc;
+}
+.pager,
+.no-pager {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #ccc;
+	margin-top: 1em;
+	padding: 3em 0;
+}
+.pager a,
+.pause {
+	background: #f5f5f5;
+	color: #2D3B45;
+	border: 1px solid #C7CDD1;
+	border-radius: 3px;
+	transition: background-color 0.2s ease-in-out;
+	display: inline-block;
+	position: relative;
+	padding: 8px 14px;
+	margin-bottom: 0;
+	font-size: 1rem;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	text-decoration: none;
+	overflow: hidden;
+	text-shadow: none;
+}
+.pager a.next,
+.pause {
+	float: right;
+}
+.pause {
+	border: 1px solid #dd1111;
+	color: #dd1111;
+	font-weight: bold;
+	font-size: 1em;
+	line-height: 1.1em;
+	margin-top: 2.25em;
+}
+.fl-right {
+	float: right;
+	margin-left: 1em;
+}
+.fl-left {
+	float: left;
+	margin-right: 1em;
+}
+.image-grid {
+	display: inline-block;
+	padding: 0 1em 1em 0;
+}
+.fake-image {
+	border: 2px solid #000; 
+	width: 20em; 
+	height: 10em;
+	padding: 1em;
+	font-size: 0.9em;
+}
+table {
+ border-collapse: collapse;
+ border: 1px solid #ccc;
+ width: 100%;
+}
+th, td {
+  padding: 1em;
+  border: 1px solid #ccc;
+}
+th {
+	background-color: #eee;
+	font-weight: bold;
+	width: 50%;
+	text-align: center;
+}
+
+
+/* Styles for canvas course html pages */
+
+.form {
+	border: 2px solid #999;
+	font: 1em/1.5em Arial, Helvetica, sans-serif;
+	color: #111;
+	padding: 1em;
+}
+
+/* =Forms
+-------------------------------------------------------------- */
+	input {
+		border: 1px solid #999;
+		font-size: 1em;
+		padding: 0.25em;
+	}
+	input[type="text"] {
+		width: 20em;
+	}
+	input[type="text"].date {
+		width: 8em;
+	}
+	input[type="checkbox"] {
+		font-size: 1.25em;
+	}
+	fieldset {
+		border: 1px solid #999;
+		width: 25em;
+	}
+	input[type="submit"], input[type="reset"] {
+		padding: 0.5em 1em;
+		margin-right: 1em;
+		background-color: #333;
+		color: #eee; 
+	}
+	input[type="submit"]:hover, input[type="reset"]:hover,
+	input[type="submit"]:focus, input[type="reset"]:focus {
+		background-color: #eee;
+		color: #333; 
+	}
+	.required {
+		font-weight: bold;
+		color: #f03;
+	}
+	
+/* =Slideshow
+-------------------------------------------------------------- */
+
+* {box-sizing:border-box}
+
+.comparison {
+	float: left;
+	position: relative;
+	width: 350px;
+}
+.slideshow-comparison-container {
+	width: 710px;
+}
+/* Slideshow container */
+.slideshow-container {
+  width: 350px;
+  position: relative;
+  margin: auto auto auto 360px;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+.comparison img,
+.mySlides img {
+	width: 350px;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 10px 6px;
+  color: #000;
+  font-weight: bold;
+  font-size: 34px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+	opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(255,255,255,0.8);
+}
+
+/* Caption text */
+.text {
+	position: relative;
+	bottom: 7px;
+	background-color: #555;
+  padding: 3px 12px;
+  width: 100%;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: transparent;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.controls {
+	margin-left: 350px;
+	text-align:center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
